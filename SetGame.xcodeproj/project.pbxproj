@@ -12,6 +12,8 @@
 		53D6FB99227CE06400682D36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D6FB97227CE06400682D36 /* Main.storyboard */; };
 		53D6FB9B227CE06500682D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D6FB9A227CE06500682D36 /* Assets.xcassets */; };
 		53D6FB9E227CE06500682D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D6FB9C227CE06500682D36 /* LaunchScreen.storyboard */; };
+		53D6FBA8227CE0BE00682D36 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6FBA7227CE0BE00682D36 /* Card.swift */; };
+		53D6FBAA227CE30600682D36 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6FBA9227CE30600682D36 /* Set.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		53D6FB9A227CE06500682D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53D6FB9D227CE06500682D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53D6FB9F227CE06500682D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53D6FBA7227CE0BE00682D36 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		53D6FBA9227CE30600682D36 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		53D6FB92227CE06400682D36 /* SetGame */ = {
 			isa = PBXGroup;
 			children = (
-				53D6FB93227CE06400682D36 /* AppDelegate.swift */,
+				53D6FBA6227CE0A800682D36 /* Model */,
 				53D6FB95227CE06400682D36 /* ViewController.swift */,
 				53D6FB97227CE06400682D36 /* Main.storyboard */,
 				53D6FB9A227CE06500682D36 /* Assets.xcassets */,
-				53D6FB9C227CE06500682D36 /* LaunchScreen.storyboard */,
+				53D6FBA5227CE07B00682D36 /* Supporting Files */,
 				53D6FB9F227CE06500682D36 /* Info.plist */,
 			);
 			path = SetGame;
+			sourceTree = "<group>";
+		};
+		53D6FBA5227CE07B00682D36 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53D6FB93227CE06400682D36 /* AppDelegate.swift */,
+				53D6FB9C227CE06500682D36 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		53D6FBA6227CE0A800682D36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53D6FBA7227CE0BE00682D36 /* Card.swift */,
+				53D6FBA9227CE30600682D36 /* Set.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D6FBAA227CE30600682D36 /* Set.swift in Sources */,
 				53D6FB96227CE06400682D36 /* ViewController.swift in Sources */,
+				53D6FBA8227CE0BE00682D36 /* Card.swift in Sources */,
 				53D6FB94227CE06400682D36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UW8Z5PY8LH;
 				INFOPLIST_FILE = SetGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UW8Z5PY8LH;
 				INFOPLIST_FILE = SetGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
