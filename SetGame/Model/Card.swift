@@ -45,7 +45,7 @@ struct Card: CustomStringConvertible, Equatable {
         }
     }
     
-    enum Shape: CustomStringConvertible {
+    enum Shape: Int, CustomStringConvertible {
         
         var description: String {
             switch self {
@@ -58,16 +58,16 @@ struct Card: CustomStringConvertible, Equatable {
             }
         }
         
-        case first
-        case second
-        case third
+        case first = 1
+        case second = 2
+        case third = 3
         
         static var all: [Shape] {
             return [.first, .second, .third]
         }
     }
     
-    enum  Shading: CustomStringConvertible {
+    enum  Shading: Int, CustomStringConvertible {
         
         var description: String {
             switch self {
@@ -79,16 +79,16 @@ struct Card: CustomStringConvertible, Equatable {
                 return "Ot"
             }
         }
-        case first
-        case second
-        case third
+        case first = 1
+        case second = 2
+        case third = 3
         
         static var all: [Shading] {
             return [.first, .second, .third]
         }
     }
     
-    enum Color: CustomStringConvertible {
+    enum Color: Int, CustomStringConvertible {
         
         var description: String {
             switch self {
@@ -101,9 +101,9 @@ struct Card: CustomStringConvertible, Equatable {
             }
         }
         
-        case first
-        case second
-        case third
+        case first = 1
+        case second = 2
+        case third = 3
         
         static var all: [Color] {
             return [.first, .second, .third]

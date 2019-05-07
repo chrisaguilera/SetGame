@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		534295CA227D7B520008C596 /* SetScreenshot1.png in Resources */ = {isa = PBXBuildFile; fileRef = 534295C6227D7B520008C596 /* SetScreenshot1.png */; };
-		534295CB227D7B520008C596 /* SetScreenshot3.png in Resources */ = {isa = PBXBuildFile; fileRef = 534295C7227D7B520008C596 /* SetScreenshot3.png */; };
-		534295CC227D7B520008C596 /* SetScreenshot2.png in Resources */ = {isa = PBXBuildFile; fileRef = 534295C8227D7B520008C596 /* SetScreenshot2.png */; };
-		534295CD227D7B520008C596 /* SetScreenshot4.png in Resources */ = {isa = PBXBuildFile; fileRef = 534295C9227D7B520008C596 /* SetScreenshot4.png */; };
+		535E2C6422800EA600B47503 /* SetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E2C6322800EA600B47503 /* SetCardView.swift */; };
+		535E2C6C2280C1BA00B47503 /* SetCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E2C6B2280C1BA00B47503 /* SetCardCollectionViewCell.swift */; };
+		535E2C6E2280C6B600B47503 /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E2C6D2280C6B600B47503 /* GridFlowLayout.swift */; };
+		535E2C7322814DF600B47503 /* SelectedSet.png in Resources */ = {isa = PBXBuildFile; fileRef = 535E2C6F22814DF600B47503 /* SelectedSet.png */; };
+		535E2C7422814DF600B47503 /* ManyCards.png in Resources */ = {isa = PBXBuildFile; fileRef = 535E2C7022814DF600B47503 /* ManyCards.png */; };
+		535E2C7522814DF600B47503 /* NewGame.png in Resources */ = {isa = PBXBuildFile; fileRef = 535E2C7122814DF600B47503 /* NewGame.png */; };
+		535E2C7622814DF600B47503 /* ScoreUpdate.png in Resources */ = {isa = PBXBuildFile; fileRef = 535E2C7222814DF600B47503 /* ScoreUpdate.png */; };
 		53D6FB94227CE06400682D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6FB93227CE06400682D36 /* AppDelegate.swift */; };
 		53D6FB96227CE06400682D36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6FB95227CE06400682D36 /* ViewController.swift */; };
 		53D6FB99227CE06400682D36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D6FB97227CE06400682D36 /* Main.storyboard */; };
@@ -21,10 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		534295C6227D7B520008C596 /* SetScreenshot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SetScreenshot1.png; sourceTree = "<group>"; };
-		534295C7227D7B520008C596 /* SetScreenshot3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SetScreenshot3.png; sourceTree = "<group>"; };
-		534295C8227D7B520008C596 /* SetScreenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SetScreenshot2.png; sourceTree = "<group>"; };
-		534295C9227D7B520008C596 /* SetScreenshot4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SetScreenshot4.png; sourceTree = "<group>"; };
+		535E2C6322800EA600B47503 /* SetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardView.swift; sourceTree = "<group>"; };
+		535E2C6B2280C1BA00B47503 /* SetCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		535E2C6D2280C6B600B47503 /* GridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
+		535E2C6F22814DF600B47503 /* SelectedSet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectedSet.png; sourceTree = "<group>"; };
+		535E2C7022814DF600B47503 /* ManyCards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManyCards.png; sourceTree = "<group>"; };
+		535E2C7122814DF600B47503 /* NewGame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewGame.png; sourceTree = "<group>"; };
+		535E2C7222814DF600B47503 /* ScoreUpdate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScoreUpdate.png; sourceTree = "<group>"; };
 		53D6FB90227CE06400682D36 /* SetGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SetGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D6FB93227CE06400682D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53D6FB95227CE06400682D36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,12 +56,22 @@
 		534295C5227D7AEF0008C596 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				534295C6227D7B520008C596 /* SetScreenshot1.png */,
-				534295C8227D7B520008C596 /* SetScreenshot2.png */,
-				534295C7227D7B520008C596 /* SetScreenshot3.png */,
-				534295C9227D7B520008C596 /* SetScreenshot4.png */,
+				535E2C7022814DF600B47503 /* ManyCards.png */,
+				535E2C7122814DF600B47503 /* NewGame.png */,
+				535E2C7222814DF600B47503 /* ScoreUpdate.png */,
+				535E2C6F22814DF600B47503 /* SelectedSet.png */,
 			);
 			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		535E2C6222800E6200B47503 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				535E2C6322800EA600B47503 /* SetCardView.swift */,
+				535E2C6B2280C1BA00B47503 /* SetCardCollectionViewCell.swift */,
+				535E2C6D2280C6B600B47503 /* GridFlowLayout.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		53D6FB87227CE06400682D36 = {
@@ -78,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				53D6FBA6227CE0A800682D36 /* Model */,
+				535E2C6222800E6200B47503 /* View */,
 				53D6FB95227CE06400682D36 /* ViewController.swift */,
 				53D6FB97227CE06400682D36 /* Main.storyboard */,
 				53D6FB9A227CE06500682D36 /* Assets.xcassets */,
@@ -164,13 +181,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				534295CB227D7B520008C596 /* SetScreenshot3.png in Resources */,
-				534295CA227D7B520008C596 /* SetScreenshot1.png in Resources */,
-				534295CD227D7B520008C596 /* SetScreenshot4.png in Resources */,
+				535E2C7522814DF600B47503 /* NewGame.png in Resources */,
 				53D6FB9E227CE06500682D36 /* LaunchScreen.storyboard in Resources */,
 				53D6FB9B227CE06500682D36 /* Assets.xcassets in Resources */,
+				535E2C7622814DF600B47503 /* ScoreUpdate.png in Resources */,
 				53D6FB99227CE06400682D36 /* Main.storyboard in Resources */,
-				534295CC227D7B520008C596 /* SetScreenshot2.png in Resources */,
+				535E2C7422814DF600B47503 /* ManyCards.png in Resources */,
+				535E2C7322814DF600B47503 /* SelectedSet.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				53D6FBAA227CE30600682D36 /* Set.swift in Sources */,
+				535E2C6422800EA600B47503 /* SetCardView.swift in Sources */,
+				535E2C6C2280C1BA00B47503 /* SetCardCollectionViewCell.swift in Sources */,
 				53D6FB96227CE06400682D36 /* ViewController.swift in Sources */,
+				535E2C6E2280C6B600B47503 /* GridFlowLayout.swift in Sources */,
 				53D6FBA8227CE0BE00682D36 /* Card.swift in Sources */,
 				53D6FB94227CE06400682D36 /* AppDelegate.swift in Sources */,
 			);

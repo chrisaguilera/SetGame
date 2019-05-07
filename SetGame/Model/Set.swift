@@ -13,11 +13,9 @@ struct Set {
     private(set) var visibleCards = [Card]()
     private(set) var selectedCards = [Card]()
     private(set) var matchedCards = [Card]()
-    private(set) var hiddenCards = [Card]()
     private(set) var score = 0
     
     init() {
-        // Setup deck of cards
         for numShapes in Card.NumberOfShapes.all {
             for shape in Card.Shape.all {
                 for shading in Card.Shading.all {
@@ -27,13 +25,8 @@ struct Set {
                 }
             }
         }
-        // Setup initial 12 visible cards and 12 hidden cards
-        for i in 0..<24 {
-            let card = deck.remove(at: deck.count.arc4random)
-            visibleCards.append(card)
-            if i > 11 {
-                hiddenCards.append(card)
-            }
+        for _ in 0..<12 {
+            visibleCards.append(deck.remove(at: deck.count.arc4random))
         }
         
     }
@@ -41,14 +34,8 @@ struct Set {
     mutating func select(card: Card) {
         if selectedCards.count == 3 {
             matchSet()
-            if matchedCards.contains(card) {
-                selectedCards = [Card]()
-            } else {
-                selectedCards = [Card]()
-                selectedCards.append(card)
-            }
         } else {
-            if selectedCards.count != 0, let index = selectedCards.firstIndex(of: card) { // Selected previously selected card -- deselect
+            if selectedCards.count != 0, let index = selectedCards.firstIndex(of: card) {
                 selectedCards.remove(at: index)
             } else {
                 selectedCards.append(card)
@@ -57,53 +44,47 @@ struct Set {
     }
     
     mutating func dealThreeCards() {
-        // Perform as set check
         if selectedCards.count == 3 {
-            if validNumShapes() && validShapes() && validColors() && validShading() {
-                validSet()
-                matchedCards += selectedCards
-                // Replace matched cards
-                if deck.count > 2 {
-                    for card in selectedCards {
-                        if let index = visibleCards.firstIndex(of: card) {
-                            visibleCards[index] = deck.remove(at: deck.count.arc4random)
-                        }
+            let preNumMatchedCards = matchedCards.count
+            matchSet()
+            if matchedCards.count == preNumMatchedCards {
+                if deck.count > 0 {
+                    for _ in 0..<3 {
+                        visibleCards.append(deck.remove(at: deck.count.arc4random))
                     }
                 }
-                selectedCards = [Card]()
-            } else {
-                invalidSet()
-                if hiddenCards.count > 0 {
-                    for _ in 0...2 {
-                        hiddenCards.remove(at: 0)
-                    }
-                }
-                selectedCards = [Card]()
             }
-        } else { // Reveal hidden cards
-            if hiddenCards.count > 0 {
-                for _ in 0...2 {
-                    hiddenCards.remove(at: 0)
+        } else {
+            if deck.count > 0 {
+                for _ in 0..<3 {
+                    visibleCards.append(deck.remove(at: deck.count.arc4random))
                 }
             }
         }
+
     }
     
     private mutating func matchSet() {
         if validNumShapes() && validShapes() && validColors() && validShading() {
             validSet()
             matchedCards += selectedCards
-            // Replace matched cards
             if deck.count > 2 {
                 for card in selectedCards {
                     if let index = visibleCards.firstIndex(of: card) {
                         visibleCards[index] = deck.remove(at: deck.count.arc4random)
                     }
                 }
+            } else {
+                for card in selectedCards {
+                    if let index = visibleCards.firstIndex(of: card) {
+                        visibleCards.remove(at: index)
+                    }
+                }
             }
         } else {
             invalidSet()
         }
+        selectedCards = []
     }
     
     private mutating func validSet() {
