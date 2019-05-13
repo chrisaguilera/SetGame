@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         dealButton.layer.cornerRadius = 5.0
         
         scoreLabel.text = String(set.score)
+        bestScoreLabel.text = String(set.currBestScore)
         configureCollectionView()
     }
     
@@ -52,6 +53,7 @@ class ViewController: UIViewController {
     
     private func updateView() {
         scoreLabel.text = String(set.score)
+        bestScoreLabel.text = String(set.currBestScore)
         collectionView.reloadData()
     }
 

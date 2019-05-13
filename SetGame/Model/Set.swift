@@ -14,6 +14,10 @@ struct Set {
     private(set) var selectedCards = [Card]()
     private(set) var matchedCards = [Card]()
     private(set) var score = 0
+    private var prevBestScore: Int {
+        return UserDefaults.standard.integer(forKey: "bestScore")
+    }
+    lazy var currBestScore = self.prevBestScore
     
     init() {
         for numShapes in Card.NumberOfShapes.all {
@@ -88,11 +92,26 @@ struct Set {
     }
     
     private mutating func validSet() {
-        score += 3
+        if visibleCards.count < 20 {
+            score += 100
+        } else if visibleCards.count < 40 {
+            score += 50
+        } else if visibleCards.count < 60 {
+            score += 25
+        } else {
+            score += 10
+        }
+        if score > currBestScore {
+           currBestScore = score
+        }
     }
     
     private mutating func invalidSet() {
-        score -= 5
+        score -= 50
+    }
+    
+    mutating func saveBestScore() {
+        UserDefaults.standard.set(currBestScore, forKey: "bestScore")
     }
     
     private func validNumShapes() -> Bool {
