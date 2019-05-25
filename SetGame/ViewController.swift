@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     var set = Set()
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var dealButton: UIButton!
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func newGameButtonPressed(_ sender: UIButton) {
+        set.saveBestScore()
         set = Set()
         updateView()
     }
