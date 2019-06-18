@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     var set = Set()
-    @IBOutlet weak var newGameButton: UIButton!
+
+    @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var dealButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var bestScoreLabel: UILabel!
@@ -25,8 +26,8 @@ class ViewController: UIViewController {
         
         backgroundTableView.layer.cornerRadius = 5.0
         scoreContainerView.layer.cornerRadius = 5.0
+        menuButton.layer.cornerRadius = 5.0
         bestScoreContainerView.layer.cornerRadius = 5.0
-        newGameButton.layer.cornerRadius = 5.0
         dealButton.layer.cornerRadius = 5.0
         
         scoreLabel.text = String(set.score)
@@ -56,6 +57,10 @@ class ViewController: UIViewController {
         scoreLabel.text = String(set.score)
         bestScoreLabel.text = String(set.currBestScore)
         collectionView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
 
 }
