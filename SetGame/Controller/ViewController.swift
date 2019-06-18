@@ -34,12 +34,6 @@ class ViewController: UIViewController {
         bestScoreLabel.text = String(set.currBestScore)
         configureCollectionView()
     }
-    
-    @IBAction func newGameButtonPressed(_ sender: UIButton) {
-        set.saveBestScore()
-        set = Set()
-        updateView()
-    }
 
     @IBAction func dealButtonPressed(_ sender: UIButton) {
         set.dealThreeCards()
@@ -60,7 +54,14 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.destination.isKind(of: MenuViewController.self), let mvc = segue.destination as? MenuViewController {
+            mvc.newGameHandler = {
+                self.set.saveBestScore()
+                self.set = Set()
+                self.updateView()
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 
 }

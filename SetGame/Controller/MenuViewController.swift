@@ -18,6 +18,8 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
     
+    var newGameHandler: (() -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +35,14 @@ class MenuViewController: UIViewController {
     
     @IBAction func backgroundButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func newGameButtonPressed(_ sender: UIButton) {
+        newGameHandler?()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
     
 }

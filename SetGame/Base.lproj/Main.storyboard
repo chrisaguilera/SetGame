@@ -6,7 +6,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,7 +34,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE1-6l-0da">
                                         <rect key="frame" x="0.0" y="54" width="374" height="44"/>
-                                        <color key="backgroundColor" red="1" green="0.49411764705882355" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.01663198695" green="0.58996301890000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                         <state key="normal" title="Sign In">
@@ -47,9 +46,9 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axh-CZ-CXM">
                                         <rect key="frame" x="0.0" y="108" width="374" height="42"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
-                                        <state key="normal" title="SKIP">
+                                        <state key="normal" title="Skip for now">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -70,6 +69,10 @@
                     <navigationItem key="navigationItem" title="Welcome" id="AmL-df-PBn">
                         <barButtonItem key="backBarButtonItem" title=" " id="H8h-MH-VQh"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="signInButton" destination="TE1-6l-0da" id="6Cb-Y8-PbY"/>
+                        <outlet property="signUpButton" destination="LqS-63-UL2" id="LIq-ZL-w40"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uby-ys-ae0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021.7391304347827" y="129.91071428571428"/>
+            <point key="canvasLocation" x="1362" y="297"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="kuU-6K-OyN">
@@ -251,8 +254,11 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
                                                 <state key="normal" title="New Game">
-                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="newGameButtonPressed:" destination="kQu-wV-SaG" eventType="touchUpInside" id="OG5-bA-j8u"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7P-Lk-aeI">
                                                 <rect key="frame" x="0.0" y="72.000000000000028" width="334" height="57"/>
@@ -260,7 +266,7 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
                                                 <state key="normal" title="Leaderboard">
-                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHE-Kz-9mV">
@@ -269,7 +275,7 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
                                                 <state key="normal" title="How To Play">
-                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pW6-9f-hIM">
@@ -278,7 +284,7 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
                                                 <state key="normal" title="Rate">
-                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaS-Yj-VYP">
@@ -287,8 +293,11 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
                                                 <state key="normal" title="Sign Up">
-                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="SD0-Vh-yA2" kind="presentation" id="Ca3-pv-YTL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIG-XH-sgz">
                                                 <rect key="frame" x="0.0" y="360" width="334" height="57"/>
@@ -296,13 +305,16 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
                                                 <state key="normal" title="Sign In">
-                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="VKe-kf-ffW" kind="presentation" id="lbt-ky-ya0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="eny-UY-iKA" secondAttribute="bottom" constant="20" id="MFh-30-YQ4"/>
                                     <constraint firstAttribute="trailing" secondItem="eny-UY-iKA" secondAttribute="trailing" constant="20" id="Nud-Oc-zRL"/>
@@ -335,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PeC-EH-myt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2902.898550724638" y="129.91071428571428"/>
+            <point key="canvasLocation" x="2472" y="297"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="qgL-hy-VXf">
@@ -372,7 +384,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bfs-qe-t7H">
-                                <rect key="frame" x="20" y="271.33333333333331" width="374" height="77.666666666666686"/>
+                                <rect key="frame" x="20" y="271.33333333333331" width="374" height="146"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpg-kU-4C5">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
@@ -382,13 +394,29 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpButtonPressed:" destination="SD0-Vh-yA2" eventType="touchUpInside" id="zCJ-cJ-Zob"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y96-V0-1hb">
-                                        <rect key="frame" x="0.0" y="55.999999999999993" width="374" height="21.666666666666664"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxX-FU-azt">
+                                        <rect key="frame" x="0.0" y="56" width="374" height="44"/>
+                                        <color key="backgroundColor" red="0.99951261281967163" green="0.4929007887840271" blue="0.47539675235748291" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="SD0-Vh-yA2" eventType="touchUpInside" id="yy2-9s-cjp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK9-i0-nur">
+                                        <rect key="frame" x="0.0" y="112" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="Already have an account?">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -404,10 +432,18 @@
                         <viewLayoutGuide key="safeArea" id="gTz-N3-1uh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="Q6X-RJ-Ldx"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="vxX-FU-azt" id="pRJ-YH-9dm"/>
+                        <outlet property="confirmPasswordTextField" destination="g9D-5r-GBn" id="uFl-sp-xyC"/>
+                        <outlet property="haveAccountButton" destination="BK9-i0-nur" id="Qgw-Tv-Izz"/>
+                        <outlet property="passwordTextField" destination="xlq-tV-jIx" id="5V1-sA-fu5"/>
+                        <outlet property="signUpButton" destination="hpg-kU-4C5" id="Drm-ML-mld"/>
+                        <outlet property="usernameTextField" destination="FIv-uT-wv2" id="1Qh-XS-2GT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmz-SS-roT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="-164"/>
+            <point key="canvasLocation" x="1361" y="-484"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="CnK-U6-1nA">
@@ -436,24 +472,37 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HqX-aF-8Ia">
-                                <rect key="frame" x="20" y="226.33333333333329" width="374" height="73.666666666666657"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="HqX-aF-8Ia">
+                                <rect key="frame" x="20" y="226.33333333333331" width="374" height="146"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gh5-zn-Aq0">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
-                                        <color key="backgroundColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.01663198695" green="0.58996301890000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2J-6R-fA6">
-                                        <rect key="frame" x="0.0" y="52" width="374" height="21.666666666666671"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSK-T9-yf2">
+                                        <rect key="frame" x="0.0" y="56" width="374" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="VKe-kf-ffW" eventType="touchUpInside" id="Isz-Ns-xZF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAp-vv-yi4">
+                                        <rect key="frame" x="0.0" y="112" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="Don't have an account?">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -469,10 +518,17 @@
                         <viewLayoutGuide key="safeArea" id="BHB-Uv-3ev"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="pQz-lW-wdw"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="dSK-T9-yf2" id="Wcd-bV-Ua1"/>
+                        <outlet property="noAccountButton" destination="tAp-vv-yi4" id="Fox-Qx-WjH"/>
+                        <outlet property="passwordTextField" destination="ma6-di-D2A" id="ZGW-6I-YbA"/>
+                        <outlet property="signInButton" destination="Gh5-zn-Aq0" id="ru7-fJ-rcM"/>
+                        <outlet property="usernameTextField" destination="VK0-5o-Z0L" id="N9Y-mn-Icq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmg-ox-OmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="758"/>
+            <point key="canvasLocation" x="1361" y="1039"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lTu-p7-NkG">
@@ -496,4 +552,8 @@
             <point key="canvasLocation" x="-652.17391304347836" y="296.65178571428572"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MKn-bH-2be"/>
+        <segue reference="9BI-5l-2ZH"/>
+    </inferredMetricsTieBreakers>
 </document>

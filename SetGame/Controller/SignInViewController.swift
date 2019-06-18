@@ -10,12 +10,30 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var noAccountButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Visual Stuff
+        usernameTextField.layer.cornerRadius = 5.0
+        passwordTextField.layer.cornerRadius = 5.0
+        signInButton.layer.cornerRadius = 5.0
+        cancelButton.layer.cornerRadius = 5.0
+        if navigationController == nil {
+            cancelButton.isHidden = false
+        } else {
+            cancelButton.isHidden = true
+        }
     }
     
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
