@@ -15,6 +15,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var noAccountButton: UIButton!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class SignInViewController: UIViewController {
             let height: CGFloat = 75
             let statusBarHeight = UIApplication.shared.statusBarFrame.height;
             let navbar = UINavigationBar(frame: CGRect(x: 0, y: statusBarHeight, width: UIScreen.main.bounds.width, height: height))
-            navbar.barTintColor = UIColor(red: 220/255, green: 192/255, blue: 149/255, alpha: 1.0)
+            navbar.barTintColor = AppConstants.mainBackgroundColor
             navbar.isTranslucent = false
             navbar.tintColor = UIColor.white
             let attrs = [
@@ -47,25 +48,15 @@ class SignInViewController: UIViewController {
             
             let navItem = UINavigationItem()
             navItem.title = "Sign In"
-            
             navbar.items = [navItem]
             
             view.addSubview(navbar)
+            topConstraint.constant = AppConstants.topConstraint
         }
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

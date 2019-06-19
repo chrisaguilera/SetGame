@@ -8,6 +8,11 @@
 
 import UIKit
 
+struct AppConstants {
+    static let mainBackgroundColor: UIColor = UIColor(red: 244/255, green: 207/255, blue: 152/255, alpha: 1.0)
+    static let topConstraint: CGFloat = 65
+}
+
 class ViewController: UIViewController {
 
     var set = Set()

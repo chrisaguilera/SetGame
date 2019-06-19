@@ -41,8 +41,4 @@ class MenuViewController: UIViewController {
         newGameHandler?()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-    
 }
