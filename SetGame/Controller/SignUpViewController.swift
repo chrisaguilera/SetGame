@@ -32,6 +32,29 @@ class SignUpViewController: UIViewController {
         } else {
             cancelButton.isHidden = true
         }
+        
+        if navigationController == nil {
+            let height: CGFloat = 75
+            let statusBarHeight = UIApplication.shared.statusBarFrame.height;
+            let navbar = UINavigationBar(frame: CGRect(x: 0, y: statusBarHeight, width: UIScreen.main.bounds.width, height: height))
+            navbar.barTintColor = UIColor(red: 220/255, green: 192/255, blue: 149/255, alpha: 1.0)
+            navbar.isTranslucent = false
+            navbar.tintColor = UIColor.white
+            let attrs = [
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .medium)
+            ]
+            navbar.titleTextAttributes = attrs
+            navbar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            navbar.delegate = self as? UINavigationBarDelegate
+            
+            let navItem = UINavigationItem()
+            navItem.title = "Sign Up"
+            
+            navbar.items = [navItem]
+            
+            view.addSubview(navbar)
+        }
     }
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
@@ -40,7 +63,6 @@ class SignUpViewController: UIViewController {
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
 
     /*
     // MARK: - Navigation
