@@ -48,11 +48,17 @@ class SignInViewController: UIViewController {
             
             let navItem = UINavigationItem()
             navItem.title = "Sign In"
+            let backButton = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(barCancelButtonPressed))
+            navItem.leftBarButtonItem = backButton
             navbar.items = [navItem]
             
             view.addSubview(navbar)
             topConstraint.constant = AppConstants.topConstraint
         }
+    }
+    
+    @objc func barCancelButtonPressed() {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {

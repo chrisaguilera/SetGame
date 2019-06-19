@@ -21,6 +21,11 @@ class LeaderboardViewController: UIViewController {
         leaderboardSegmentedControl.layer.cornerRadius = 5.0
         backgroundTableView.layer.cornerRadius = 5.0
     }
+    
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension LeaderboardViewController: UITableViewDataSource, UITableViewDelegate {
