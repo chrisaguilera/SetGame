@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gil-2m-Uuy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -81,7 +81,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SetGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="SetGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,10 +250,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5L-rd-MzD" userLabel="Popup View">
-                                <rect key="frame" x="20" y="224.66666666666663" width="374" height="447"/>
+                                <rect key="frame" x="20" y="208.66666666666663" width="374" height="479"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eny-UY-iKA">
-                                        <rect key="frame" x="10" y="15" width="354" height="417"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eny-UY-iKA">
+                                        <rect key="frame" x="10" y="10" width="354" height="459"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MG-hs-EsZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="57"/>
@@ -268,7 +268,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7P-Lk-aeI">
-                                                <rect key="frame" x="0.0" y="72.000000000000028" width="354" height="57"/>
+                                                <rect key="frame" x="0.0" y="67.000000000000028" width="354" height="57"/>
                                                 <color key="backgroundColor" red="0.01663198695" green="0.58996301890000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
@@ -280,7 +280,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHE-Kz-9mV">
-                                                <rect key="frame" x="0.0" y="144.00000000000003" width="354" height="57"/>
+                                                <rect key="frame" x="0.0" y="134.00000000000003" width="354" height="57"/>
                                                 <color key="backgroundColor" red="0.99918872120000002" green="0.83241671319999999" blue="0.39055842159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
@@ -289,7 +289,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pW6-9f-hIM">
-                                                <rect key="frame" x="0.0" y="216.00000000000003" width="354" height="56.999999999999972"/>
+                                                <rect key="frame" x="0.0" y="201.00000000000003" width="354" height="56.999999999999972"/>
                                                 <color key="backgroundColor" red="0.99918872120000002" green="0.83241671319999999" blue="0.39055842159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
@@ -298,7 +298,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIG-XH-sgz">
-                                                <rect key="frame" x="0.0" y="288" width="354" height="57"/>
+                                                <rect key="frame" x="0.0" y="268" width="354" height="57"/>
                                                 <color key="backgroundColor" red="0.99951261280000003" green="0.49290078879999999" blue="0.47539675240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
@@ -310,7 +310,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaS-Yj-VYP">
-                                                <rect key="frame" x="0.0" y="360" width="354" height="57"/>
+                                                <rect key="frame" x="0.0" y="335" width="354" height="57"/>
                                                 <color key="backgroundColor" red="1" green="0.49491375684738159" blue="0.47541630268096924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
@@ -321,24 +321,53 @@
                                                     <segue destination="SD0-Vh-yA2" kind="presentation" id="Ca3-pv-YTL"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdV-6p-8Q2">
-                                                <rect key="frame" x="0.0" y="417" width="354" height="0.0"/>
-                                                <color key="backgroundColor" red="0.01663198695" green="0.58996301890000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdV-6p-8Q2">
+                                                <rect key="frame" x="0.0" y="402" width="354" height="57"/>
+                                                <color key="backgroundColor" red="1" green="0.49491375684738159" blue="0.47541630268096924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
                                                 <state key="normal" title="Log Out">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="logOutButtonPressed:" destination="kQu-wV-SaG" eventType="touchUpInside" id="vnh-TX-5f0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.86175620555877686" green="0.75110769271850586" blue="0.58247041702270508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="eny-UY-iKA" secondAttribute="bottom" constant="15" id="MFh-30-YQ4"/>
+                                    <constraint firstAttribute="bottom" secondItem="eny-UY-iKA" secondAttribute="bottom" constant="10" id="MFh-30-YQ4"/>
                                     <constraint firstAttribute="trailing" secondItem="eny-UY-iKA" secondAttribute="trailing" constant="10" id="Nud-Oc-zRL"/>
-                                    <constraint firstItem="eny-UY-iKA" firstAttribute="top" secondItem="e5L-rd-MzD" secondAttribute="top" constant="15" id="YCx-CJ-R3y"/>
+                                    <constraint firstItem="eny-UY-iKA" firstAttribute="top" secondItem="e5L-rd-MzD" secondAttribute="top" constant="10" id="YCx-CJ-R3y"/>
                                     <constraint firstItem="eny-UY-iKA" firstAttribute="leading" secondItem="e5L-rd-MzD" secondAttribute="leading" constant="10" id="hyZ-Ag-dcp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKZ-IO-lyz">
+                                <rect key="frame" x="20" y="148.66666666666666" width="171" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="●" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVE-35-6ho">
+                                        <rect key="frame" x="7.9999999999999991" y="14.666666666666684" width="14.666666666666664" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chrisaguilera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IT3-cH-iCE">
+                                        <rect key="frame" x="28.666666666666671" y="11.666666666666684" width="134.33333333333331" height="26.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86175620555877686" green="0.75110769271850586" blue="0.58247041702270508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="RVE-35-6ho" firstAttribute="centerY" secondItem="VKZ-IO-lyz" secondAttribute="centerY" id="HMq-IB-LRP"/>
+                                    <constraint firstItem="RVE-35-6ho" firstAttribute="leading" secondItem="VKZ-IO-lyz" secondAttribute="leading" constant="8" id="T5Z-YC-bn9"/>
+                                    <constraint firstItem="IT3-cH-iCE" firstAttribute="leading" secondItem="RVE-35-6ho" secondAttribute="trailing" constant="6" id="Trq-b7-fwH"/>
+                                    <constraint firstAttribute="trailing" secondItem="IT3-cH-iCE" secondAttribute="trailing" constant="8" id="cta-eA-lFz"/>
+                                    <constraint firstItem="IT3-cH-iCE" firstAttribute="centerY" secondItem="VKZ-IO-lyz" secondAttribute="centerY" id="i7A-Rz-wl3"/>
+                                    <constraint firstAttribute="height" constant="50" id="xV1-m8-8AL"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -347,6 +376,8 @@
                             <constraint firstItem="O6x-3f-dLF" firstAttribute="top" secondItem="DVy-iN-lm1" secondAttribute="top" id="Be0-XI-kFl"/>
                             <constraint firstItem="O6x-3f-dLF" firstAttribute="leading" secondItem="DVy-iN-lm1" secondAttribute="leading" id="CI5-oF-YzF"/>
                             <constraint firstItem="DVy-iN-lm1" firstAttribute="trailing" secondItem="e5L-rd-MzD" secondAttribute="trailing" constant="20" id="CYf-NH-vXV"/>
+                            <constraint firstItem="VKZ-IO-lyz" firstAttribute="leading" secondItem="DVy-iN-lm1" secondAttribute="leading" constant="20" id="SsR-rX-EIv"/>
+                            <constraint firstItem="e5L-rd-MzD" firstAttribute="top" secondItem="VKZ-IO-lyz" secondAttribute="bottom" constant="10" id="UoF-qI-3wb"/>
                             <constraint firstItem="e5L-rd-MzD" firstAttribute="leading" secondItem="DVy-iN-lm1" secondAttribute="leading" constant="20" id="Vnn-eQ-8FN"/>
                             <constraint firstItem="DVy-iN-lm1" firstAttribute="trailing" secondItem="O6x-3f-dLF" secondAttribute="trailing" id="bis-DU-3vl"/>
                             <constraint firstItem="IIs-Ls-yx5" firstAttribute="top" secondItem="rxl-Yx-Hg2" secondAttribute="top" id="goQ-SW-kwR"/>
@@ -360,11 +391,15 @@
                     <connections>
                         <outlet property="howToPlayButton" destination="hHE-Kz-9mV" id="hRn-r6-OOU"/>
                         <outlet property="leaderboardButton" destination="j7P-Lk-aeI" id="gtH-XR-55g"/>
+                        <outlet property="logOutButton" destination="NdV-6p-8Q2" id="pzh-pS-k6G"/>
+                        <outlet property="loggedInIndicatorLabel" destination="RVE-35-6ho" id="Wby-e2-bpU"/>
                         <outlet property="newGameButton" destination="0MG-hs-EsZ" id="whI-oU-x0r"/>
                         <outlet property="popupView" destination="e5L-rd-MzD" id="bUw-Pg-P73"/>
                         <outlet property="rateButton" destination="pW6-9f-hIM" id="6ak-EA-LAl"/>
                         <outlet property="signInButton" destination="gIG-XH-sgz" id="uty-nO-b0i"/>
                         <outlet property="signUpButton" destination="DaS-Yj-VYP" id="pTi-rR-Def"/>
+                        <outlet property="usernameLabel" destination="IT3-cH-iCE" id="t4Y-0I-QYO"/>
+                        <outlet property="usernameView" destination="VKZ-IO-lyz" id="GyD-Wy-6KG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PeC-EH-myt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -617,6 +652,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInButtonPressed:" destination="VKe-kf-ffW" eventType="touchUpInside" id="hd9-um-mjr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSK-T9-yf2">
                                         <rect key="frame" x="0.0" y="54" width="374" height="44"/>
@@ -671,7 +709,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lTu-p7-NkG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gil-2m-Uuy" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WelcomeController" automaticallyAdjustsScrollViewInsets="NO" id="gil-2m-Uuy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="fLs-7s-gtl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

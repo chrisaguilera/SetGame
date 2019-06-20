@@ -64,5 +64,26 @@ class SignInViewController: UIViewController {
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-
+    
+    @IBAction func signInButtonPressed(_ sender: Any) {
+        view.endEditing(true)
+        if usernameTextField.text?.count ?? 0 > 0, passwordTextField.text?.count ?? 0 > 0, let username = usernameTextField.text, let password = passwordTextField.text {
+            
+            // TODO: Encrypt password before sending to server
+            
+            let userSignIn = User(username: username, password: password, scores: [])
+            ServerManager.attemptSignIn(user: userSignIn) { user in
+                UserDefaults.standard.set(userSignIn.username, forKey: "Username")
+                if self.navigationController != nil {
+                    let vc: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as UIViewController
+                    self.present(vc, animated: true, completion: nil)
+                } else {
+                    if let menuVC = self.presentingViewController as? MenuViewController {
+                        menuVC.setupLoggedIn(username: userSignIn.username)
+                    }
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+    }
 }

@@ -61,14 +61,45 @@ class SignUpViewController: UIViewController {
     }
     
     @objc func barCancelButtonPressed() {
+        view.endEditing(true)
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
+        print("Sign Up Button Pressed")
+        view.endEditing(true)
+        if usernameTextField.text?.count ?? 0 > 0, passwordTextField.text?.count ?? 0 > 0, confirmPasswordTextField.text?.count ?? 0 > 0, let username = usernameTextField.text, let password = passwordTextField.text, let confirmPassword = confirmPasswordTextField.text, password == confirmPassword {
+            
+            // TODO: Encrypt password before sending to server
+            print("Valid credentials")
+            
+            let newUser = User(username: username, password: password, scores: [])
+            ServerManager.postUser(newUser) { user in
+                print("Completion Handler")
+                UserDefaults.standard.set(newUser.username, forKey: "Username")
+                if self.navigationController != nil {
+                    let vc: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as UIViewController
+                    self.present(vc, animated: true, completion: nil)
+                } else {
+                    if let menuVC = self.presentingViewController as? MenuViewController {
+                        menuVC.setupLoggedIn(username: newUser.username)
+                    }
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        view.endEditing(true)
         dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
