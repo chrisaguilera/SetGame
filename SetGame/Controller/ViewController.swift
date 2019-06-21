@@ -61,8 +61,8 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination.isKind(of: MenuViewController.self), let mvc = segue.destination as? MenuViewController {
             mvc.newGameHandler = {
-                self.set.saveBestScore()
-                self.set = Set()
+                self.set.saveScore()
+                self.set.configureNewGame()
                 self.updateView()
                 self.dismiss(animated: true, completion: nil)
             }

@@ -14,10 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        if UserDefaults.standard.string(forKey: "Username") == nil {
-            let vc: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeController") as UIViewController
-            window?.rootViewController = vc
-        }
+        // Display Welcome VC if not logged in
+//        if UserDefaults.standard.string(forKey: "Username") == nil {
+//            let vc: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeController") as UIViewController
+//            window?.rootViewController = vc
+//        }
         return true
     }
 
@@ -47,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         if let vc = self.window?.rootViewController as? ViewController {
-            vc.set.saveBestScore()
+            vc.set.saveScore()
         }
     }
 

@@ -17,6 +17,7 @@
 		535E2C7422814DF600B47503 /* ManyCards.png in Resources */ = {isa = PBXBuildFile; fileRef = 535E2C7022814DF600B47503 /* ManyCards.png */; };
 		535E2C7522814DF600B47503 /* NewGame.png in Resources */ = {isa = PBXBuildFile; fileRef = 535E2C7122814DF600B47503 /* NewGame.png */; };
 		535E2C7622814DF600B47503 /* ScoreUpdate.png in Resources */ = {isa = PBXBuildFile; fileRef = 535E2C7222814DF600B47503 /* ScoreUpdate.png */; };
+		5394425222BD594A00B569AE /* PersonalLeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5394425122BD594A00B569AE /* PersonalLeaderboardTableViewCell.swift */; };
 		53B7F18B22B96D6900B7B627 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B7F18A22B96D6900B7B627 /* MenuViewController.swift */; };
 		53B7F18F22B9846800B7B627 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B7F18E22B9846800B7B627 /* SignInViewController.swift */; };
 		53B7F19122B9847700B7B627 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B7F19022B9847700B7B627 /* SignUpViewController.swift */; };
@@ -43,6 +44,7 @@
 		535E2C7022814DF600B47503 /* ManyCards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManyCards.png; sourceTree = "<group>"; };
 		535E2C7122814DF600B47503 /* NewGame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewGame.png; sourceTree = "<group>"; };
 		535E2C7222814DF600B47503 /* ScoreUpdate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScoreUpdate.png; sourceTree = "<group>"; };
+		5394425122BD594A00B569AE /* PersonalLeaderboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalLeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		53B7F18A22B96D6900B7B627 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		53B7F18E22B9846800B7B627 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		53B7F19022B9847700B7B627 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				535E2C6B2280C1BA00B47503 /* SetCardCollectionViewCell.swift */,
 				535E2C6D2280C6B600B47503 /* GridFlowLayout.swift */,
 				53B7F19422B9C10A00B7B627 /* ReplaceSegue.swift */,
+				5394425122BD594A00B569AE /* PersonalLeaderboardTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5394425222BD594A00B569AE /* PersonalLeaderboardTableViewCell.swift in Sources */,
 				53D6FBAA227CE30600682D36 /* Set.swift in Sources */,
 				535E2C6422800EA600B47503 /* SetCardView.swift in Sources */,
 				53277B5222BB0B4400E79E4A /* Score.swift in Sources */,

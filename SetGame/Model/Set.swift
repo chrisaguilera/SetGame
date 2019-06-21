@@ -9,6 +9,7 @@
 import Foundation
 
 struct Set {
+    
     private(set) var deck = [Card]()
     private(set) var visibleCards = [Card]()
     private(set) var selectedCards = [Card]()
@@ -18,8 +19,39 @@ struct Set {
         return UserDefaults.standard.integer(forKey: "bestScore")
     }
     lazy var currBestScore = self.prevBestScore
+    private var fileURL: URL
+    var scores = [Score]()
     
     init() {
+        // Local scores
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        let documentDirectoryPath = paths[0] as String
+        let documentDirectoryURL = URL(fileURLWithPath: documentDirectoryPath)
+        fileURL = documentDirectoryURL.appendingPathComponent("scores.plist")
+        
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: fileURL.path) {
+            do {
+                let jsonDecoder = JSONDecoder()
+                let jsonData = try Data(contentsOf: fileURL)
+                scores = try jsonDecoder.decode([Score].self, from: jsonData)
+            } catch {
+                print(error)
+            }
+        } else {
+            print("'scores.plist' not yet created.")
+        }
+        
+        // Configure game
+        configureNewGame()
+    }
+    
+    mutating func configureNewGame() {
+        deck = [Card]()
+        visibleCards = [Card]()
+        selectedCards = [Card]()
+        matchedCards = [Card]()
+        score = 0
         for numShapes in Card.NumberOfShapes.all {
             for shape in Card.Shape.all {
                 for shading in Card.Shading.all {
@@ -32,7 +64,6 @@ struct Set {
         for _ in 0..<12 {
             visibleCards.append(deck.remove(at: deck.count.arc4random))
         }
-        
     }
     
     mutating func select(card: Card) {
@@ -110,8 +141,23 @@ struct Set {
         score -= 50
     }
     
-    mutating func saveBestScore() {
-        UserDefaults.standard.set(currBestScore, forKey: "bestScore")
+    mutating func saveScore() {
+        if score > 0 {
+            let newScore = Score(user: "Local User", score: score, date: Date())
+            scores.append(newScore)
+            save()
+            UserDefaults.standard.set(currBestScore, forKey: "bestScore")
+        }
+    }
+    
+    private func save() {
+        do {
+            let jsonEncoder = JSONEncoder()
+            let jsonData = try jsonEncoder.encode(scores)
+            try jsonData.write(to: fileURL)
+        } catch {
+            print(error)
+        }
     }
     
     private func validNumShapes() -> Bool {
